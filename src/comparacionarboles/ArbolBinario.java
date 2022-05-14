@@ -1,6 +1,7 @@
 
 package comparacionarboles;
 
+
 public class ArbolBinario {
     NodoArbol1 raiz1;
     NodoArbol2 raiz2;
@@ -69,6 +70,7 @@ public class ArbolBinario {
     
     //Método para comparar los dos árboles
     public boolean comparar(NodoArbol1 r1, NodoArbol2 r2){
+        if(r1 == null && r2 == null) return true;
         if(r1 == null && r2 != null || r1 != null && r2 == null ) return false; //Si los árboles no tienen el mismo número de nodos es porque no son iguales
         if(r1.dato1 != r2.dato2){ // Si los datos no son iguales retornará falso
             return false;
@@ -104,5 +106,6 @@ public class ArbolBinario {
         raiz2.hijoDerecho2 = raiz2.hijoIzquierdo2 = null;
         raiz2 = null;
     }
-}
 
+    
+}
